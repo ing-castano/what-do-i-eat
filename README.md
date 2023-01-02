@@ -1,5 +1,8 @@
 # What do I eat? :yum: 
+<<<<<<< HEAD
 Web App to suggest what to cook with the user's ingredients available at their homes!
+=======
+>>>>>>> 3e12aa5 (Final Release)
 #### Video Demo:  <https://youtu.be/ATdL_jr6PLc>
 #### Description:
 
@@ -132,3 +135,7 @@ FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
 CREATE INDEX user_favs ON favourites(user_id);
+<<<<<<< HEAD
+=======
+sqlite> 
+>>>>>>> 3e12aa5 (Final Release)
