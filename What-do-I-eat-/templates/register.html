@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+        <h2>Registration Form</h2>
+        <p> Please fill the form below and join our great community!</p>
+
+    <form action="/register" method="post">
+        <div class="row mb-3">
+            <div class="col-5 text-end "><p class="d-inline"><span class="align-middle">Username</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline align-middle" id="user" name="username" placeholder="Username" type="text" onfocusout="validate_user()">
+                <p id="user_msg" class="d-inline text-danger"></p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-5 text-end"><p class="d-inline"><span class="align-middle">Password</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline" id="pass" name="password" placeholder="Password" type="password" onfocusout="validate_pass()">
+                <p id="pass_msg" class="d-inline text-danger"></p>
+            </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+            <div class="col-5 text-end"><p class="d-inline"><span class="align-middle">Confirmation</span></p></div>
+            <div class="col-7 text-start">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto d-inline" id="pwconf" name="confirmation" placeholder="Retype password" type="password" onfocusin="validate_confirmation()">
+                <p id="pwconf_msg" class="d-inline"></p>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+    <h4 class="text-center mb-4">What do you have in your kitchen space?</h3>
+        <form onsubmit="add_ingredient(); return false;">
+            <div class="container w-50 ">
+                <div class="row justify-content-center">
+                    <div class="row">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" list="suggest" id="ingredients" name="ingredients" placeholder="What ingredients do you have?" type="text">
+                    </div>
+                    <div class="row col-auto">
+                        <button type="submit" class="btn mt-1 mb-3 btn-sm btn-outline-light active">Click here or hit enter to add ingredients!</button>
+                    </div>
+                </div>
+            </div>
+            <!-- this portion is no longer needed with the jquery autocomplete
+                <datalist class="w-auto mx-auto border" id="suggest"></datalist>
+            -->
+        </form>
+
+        <div class="container-fluid">
+            <ul id="filters"></ul>
+        </div>
+        
+        <form action="/search" method="get" >
+            <div class="mb-3">
+                <input name="q" id="q" type="hidden">
+                <button class="btn btn-primary" type="submit"> Search </button>
+            </div>
+        </form>
+    <script>clear_inputs();</script>
+{% endblock %}
